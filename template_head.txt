@@ -1,0 +1,2 @@
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171716">
+<link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/file_00000000468882109722c236b405d315.png">
