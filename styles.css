@@ -407,3 +407,43 @@ img { max-width: 100%; }
 @media (max-width: 420px) {
   .portfolio-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Portfolio layout correction: consistent image frames prevent cards from colliding. */
+.portfolio-grid { align-items: stretch; }
+.portfolio-card { min-width: 0; isolation: isolate; }
+.portfolio-card .image-frame,
+.portfolio-card:nth-child(3n+1) .image-frame,
+.portfolio-card:nth-child(5n) .image-frame { height: 390px; }
+.portfolio-card .image-frame img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+.portfolio-overlay { z-index: 4; padding: 22px; transform: none; }
+.portfolio-overlay h3 { font-size: clamp(23px, 2.3vw, 32px); line-height: 1.15; overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .portfolio-card,
+  .portfolio-card:nth-child(3n+1),
+  .portfolio-card:nth-child(3n+2),
+  .portfolio-card:nth-child(5n) { grid-column: span 1; }
+  .portfolio-card .image-frame,
+  .portfolio-card:nth-child(3n+1) .image-frame,
+  .portfolio-card:nth-child(5n) .image-frame { height: 270px; }
+  .portfolio-overlay { padding: 14px; }
+  .portfolio-overlay h3 { font-size: clamp(19px, 2.5vw, 25px); }
+}
+@media (max-width: 560px) {
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .portfolio-card .image-frame,
+  .portfolio-card:nth-child(3n+1) .image-frame,
+  .portfolio-card:nth-child(5n) .image-frame { height: clamp(145px, 43vw, 205px); }
+  .portfolio-overlay { padding: 10px; background: linear-gradient(transparent 0%, rgba(0,0,0,.78) 100%); }
+  .portfolio-overlay small { font-size: 8px; letter-spacing: .09em; }
+  .portfolio-overlay h3 { font-size: clamp(15px, 4vw, 19px); line-height: 1.12; }
+  .filters { gap: 6px; margin-bottom: 20px; }
+  .filter { padding: 9px 10px; font-size: 8px; }
+  .section:has(.portfolio-grid) { padding-top: 32px; }
+}
+@media (max-width: 360px) {
+  .portfolio-grid { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-card .image-frame,
+  .portfolio-card:nth-child(3n+1) .image-frame,
+  .portfolio-card:nth-child(5n) .image-frame { height: 220px; }
+}
