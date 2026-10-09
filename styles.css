@@ -536,3 +536,56 @@ img { max-width:100%; }
  .portfolio-card .image-frame { aspect-ratio: 4 / 3; }
  .portfolio-overlay h3 { font-size:16px; }
 }
+
+
+/* Homepage-only mobile compact layout: preserve desktop and all other pages. */
+@media (max-width: 560px) {
+  .home-page .hero { min-height: 570px; padding: 112px 0 38px; }
+  .home-page .hero h1 { font-size: clamp(42px, 11vw, 54px); line-height: 1.02; margin: 10px 0 14px; }
+  .home-page .hero p { font-size: 14px; line-height: 1.55; max-width: 330px; }
+  .home-page .hero-actions { gap: 8px; margin-top: 18px; }
+  .home-page .hero-actions .btn { padding: 10px 12px; font-size: 9px; letter-spacing: .1em; }
+  .home-page .hero-meta { display: none; }
+  .home-page .section-sm { padding-block: 30px; }
+  .home-page .home-intro { gap: 12px; }
+  .home-page .home-intro .display,
+  .home-page .section-head .display { font-size: clamp(30px, 8vw, 40px); line-height: 1.12; }
+  .home-page .home-intro p,
+  .home-page .section-head p { font-size: 13px; line-height: 1.6; margin-top: 10px; }
+  .home-page .home-intro .btn { justify-self: start; padding: 10px 13px; }
+  .home-page .home-gallery-section { padding: 34px 0; }
+  .home-page .home-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: 148px; gap: 9px; }
+  .home-page .home-gallery-item.tall,
+  .home-page .home-gallery-item.wide { grid-column: auto; grid-row: auto; }
+  .home-page .home-gallery-item img { min-height: 0; }
+  .home-page .home-gallery-item figcaption { padding: 30px 9px 9px; }
+  .home-page .home-gallery-item figcaption strong { font-size: 13px; line-height: 1.2; }
+  .home-page .editorial { gap: 10px; }
+  .home-page .editorial .large,
+  .home-page .editorial .small { min-height: 0; height: 185px; }
+  .home-page .editorial .image-frame img { height: 100%; object-fit: cover; }
+  .home-page .image-led-home { gap: 9px; }
+  .home-page .home-commercial { padding-block: 32px; }
+  .home-page .commercial-grid { gap: 10px; }
+  .home-page .commercial-grid figure,
+  .home-page .commercial-grid figure img { min-height: 0; height: 205px; }
+  .home-page .commercial-grid figcaption { padding: 36px 12px 12px; }
+  .home-page .commercial-grid figcaption strong { font-size: 16px; }
+  .home-page .mini-board { gap: 20px; }
+  .home-page .mini-board .board-visual { gap: 8px; }
+  .home-page .mini-board .board-visual img { height: 175px; }
+  .home-page .mini-board h2.display { font-size: clamp(34px, 9vw, 46px) !important; line-height: 1.1; }
+  .home-page .cta-band { padding: 38px 18px; }
+  .home-page .cta-band h2 { font-size: clamp(31px, 8vw, 42px); line-height: 1.12; }
+  .home-page .cta-band p { font-size: 13px; }
+}
+@media (max-width: 380px) {
+  .home-page .hero { min-height: 530px; }
+  .home-page .hero-actions .btn { padding: 9px 10px; font-size: 8px; }
+  .home-page .home-gallery { grid-auto-rows: 128px; }
+  .home-page .home-gallery-item figcaption strong { font-size: 12px; }
+  .home-page .editorial .large,
+  .home-page .editorial .small { height: 155px; }
+  .home-page .commercial-grid figure,
+  .home-page .commercial-grid figure img { height: 175px; }
+}
