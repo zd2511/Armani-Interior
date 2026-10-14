@@ -19,7 +19,7 @@ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInte
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // WhatsApp helpers
-const wa='https://wa.me/27633141801?text='+encodeURIComponent('Hello Armani Interiors, I would like to enquire about an interior design project.');
+const wa='https://wa.me/27633141801?text='+encodeURIComponent('Hello Amani Interiors, I would like to enquire about an interior design project.');
 document.querySelectorAll('[data-whatsapp]').forEach(a=>a.href=wa);
 document.querySelectorAll('[data-phone]').forEach(a=>a.href='tel:+27633141801');
 
@@ -74,7 +74,7 @@ document.querySelector('#boardModal')?.addEventListener('click',e=>{if(e.target.
 
 // Contact form: no fake backend. Opens a prefilled WhatsApp message as an explicit client-side handoff.
 const form=document.querySelector('#contactForm');
-form?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const msg=`Hello Armani Interiors,\n\nName: ${d.get('name')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')}\nService: ${d.get('service')}\nMessage: ${d.get('message')}`;window.open('https://wa.me/27633141801?text='+encodeURIComponent(msg),'_blank','noopener');document.querySelector('.form-status').textContent='Your enquiry has been prepared for WhatsApp. Please review it before sending.';});
+form?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const msg=`Hello Amani Interiors,\n\nName: ${d.get('name')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')}\nService: ${d.get('service')}\nMessage: ${d.get('message')}`;window.open('https://wa.me/27633141801?text='+encodeURIComponent(msg),'_blank','noopener');document.querySelector('.form-status').textContent='Your enquiry has been prepared for WhatsApp. Please review it before sending.';});
 
 // Micro-interactions: subtle pointer tilt on desktop cards, with no layout changes.
 if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {

@@ -121,7 +121,7 @@
 .modal-palette-swatches .palette-swatch{flex:1;width:auto;height:38px;border-radius:0;border:1px solid rgba(0,0,0,.09);box-shadow:none}
 @media(max-width:620px){.photographic-board .palette-swatches{height:26px}.photographic-board .palette-swatch{height:26px}.modal-palette-swatches,.modal-palette-swatches .palette-swatch{height:32px}}
 
-/* Armani interaction refinement — richer motion without changing the existing visual system. */
+/* Amani interaction refinement — richer motion without changing the existing visual system. */
 @media (hover:hover) and (pointer:fine){
   .site-header .brand img{transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .35s ease}
   .site-header .brand:hover img{transform:rotate(-3deg) scale(1.05);filter:drop-shadow(0 6px 12px rgba(199,161,90,.18))}
