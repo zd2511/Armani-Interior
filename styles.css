@@ -589,3 +589,12 @@ img { max-width:100%; }
   .home-page .commercial-grid figure,
   .home-page .commercial-grid figure img { height: 175px; }
 }
+
+/* Premium homepage image treatment refresh */
+.home-gallery-item, .image-frame, .commercial-grid figure { box-shadow: 0 18px 42px rgba(30,24,18,.09); }
+.home-gallery-item img, .image-frame img, .commercial-grid figure img { filter: saturate(1.04) contrast(1.02); }
+.home-gallery-item:after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(20,17,13,.02) 35%,rgba(20,17,13,.22)); opacity:.8; transition:opacity .45s ease; }
+.home-gallery-item:hover:after { opacity:.35; }
+.home-gallery-item figcaption { z-index:1; }
+@media(min-width:901px){ .home-gallery { grid-template-rows:minmax(300px, 29vw) minmax(260px, 24vw); gap:18px; } .home-gallery-item img { object-position:center; } }
+@media(max-width:560px){ .home-gallery-item { border-radius:2px; } .home-gallery-item figcaption { padding:38px 12px 11px; } .home-gallery-item figcaption strong { font-size:14px; } }
