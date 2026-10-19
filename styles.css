@@ -598,3 +598,6 @@ img { max-width:100%; }
 .home-gallery-item figcaption { z-index:1; }
 @media(min-width:901px){ .home-gallery { grid-template-rows:minmax(300px, 29vw) minmax(260px, 24vw); gap:18px; } .home-gallery-item img { object-position:center; } }
 @media(max-width:560px){ .home-gallery-item { border-radius:2px; } .home-gallery-item figcaption { padding:38px 12px 11px; } .home-gallery-item figcaption strong { font-size:14px; } }
+
+/* Keep the contact email in its intended lowercase form in the footer. */
+.footer-bottom a{ text-transform:none; letter-spacing:normal; }
