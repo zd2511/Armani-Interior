@@ -606,3 +606,10 @@ img { max-width:100%; }
 .footer-email{display:inline-block;color:var(--gold)!important;font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:none;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:4px;overflow-wrap:anywhere}
 .footer-email:hover{color:#fff!important;text-decoration-color:var(--gold)}
 @media(max-width:560px){.footer-email{font-size:14px}}
+
+
+/* FINAL FOOTER FIX: visibly smaller brand wordmark and prominent email link. */
+.footer h2 { font-size: clamp(34px, 5.5vw, 76px) !important; line-height: 1.02 !important; letter-spacing: -0.035em !important; overflow-wrap: anywhere; }
+.footer-bottom a.footer-email { color: #d9b46f !important; font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: underline !important; text-decoration-color: #d9b46f !important; text-underline-offset: 4px !important; }
+.footer-bottom a.footer-email:hover { color: #ffffff !important; }
+@media (max-width: 560px) { .footer h2 { font-size: clamp(32px, 9vw, 46px) !important; line-height: 1.05 !important; } .footer-bottom a.footer-email { font-size: 15px !important; } }
