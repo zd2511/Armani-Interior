@@ -645,3 +645,30 @@ img { max-width:100%; }
   .footer h2.footer-wordmark, .footer .footer-wordmark { font-size: clamp(30px, 8vw, 42px) !important; }
   .footer .footer-email { overflow-wrap: anywhere; }
 }
+
+
+/* Verified footer correction: exact title case, substantially smaller wordmark, clear email. */
+.footer h2.footer-wordmark {
+  text-transform: none !important;
+  font-size: clamp(28px, 3.2vw, 42px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.025em !important;
+  font-variant: normal !important;
+  font-weight: 400 !important;
+}
+.footer h2.footer-wordmark span { color: var(--gold) !important; }
+.footer .footer-bottom a.footer-email {
+  display: inline-block !important;
+  color: #e0bd7a !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: underline !important;
+  text-decoration-color: #e0bd7a !important;
+  text-underline-offset: 4px !important;
+}
+@media (max-width: 600px) {
+  .footer h2.footer-wordmark { font-size: clamp(27px, 7vw, 36px) !important; }
+  .footer .footer-bottom a.footer-email { font-size: 15px !important; }
+}
