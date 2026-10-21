@@ -617,3 +617,7 @@ img { max-width:100%; }
 
 /* Footer brand wordmark: preserve the requested lowercase styling. */
 .footer h2 { text-transform: none !important; }
+
+
+/* Enforce fully lowercase footer wordmark, regardless of inherited typography rules. */
+.footer h2 { text-transform: lowercase !important; }
