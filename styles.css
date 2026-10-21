@@ -613,3 +613,7 @@ img { max-width:100%; }
 .footer-bottom a.footer-email { color: #d9b46f !important; font-size: 15px !important; font-weight: 700 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: underline !important; text-decoration-color: #d9b46f !important; text-underline-offset: 4px !important; }
 .footer-bottom a.footer-email:hover { color: #ffffff !important; }
 @media (max-width: 560px) { .footer h2 { font-size: clamp(32px, 9vw, 46px) !important; line-height: 1.05 !important; } .footer-bottom a.footer-email { font-size: 15px !important; } }
+
+
+/* Footer brand wordmark: preserve the requested lowercase styling. */
+.footer h2 { text-transform: none !important; }
