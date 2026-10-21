@@ -621,3 +621,27 @@ img { max-width:100%; }
 
 /* Enforce fully lowercase footer wordmark, regardless of inherited typography rules. */
 .footer h2 { text-transform: none !important; }
+
+
+/* Final footer wordmark correction: exact title case and a smaller, consistent size. */
+.footer h2.footer-wordmark, .footer .footer-wordmark {
+  text-transform: none !important;
+  font-size: clamp(32px, 4.4vw, 64px) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.045em !important;
+  font-variant: normal !important;
+}
+.footer h2.footer-wordmark span { color: var(--gold) !important; }
+.footer .footer-email {
+  color: var(--gold) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .footer h2.footer-wordmark, .footer .footer-wordmark { font-size: clamp(30px, 8vw, 42px) !important; }
+  .footer .footer-email { overflow-wrap: anywhere; }
+}
